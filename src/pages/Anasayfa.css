@@ -128,7 +128,7 @@ body {
   width: 530px;
   height: 450px;
   background-color: #CE2829;
-  background-image: url("./public/assets/iteration-2/cta/kart-1.png");
+  background-image: url('../../images/iteration-2-images/cta/kart-1.png');
   background-repeat: no-repeat;
   background-position: right bottom;
   border-radius: 12px;
@@ -163,7 +163,7 @@ body {
   width: 530px;
   height: 220px;
   background-color: #F1EBDC;
-  background-image: url("./public/assets/iteration-2/cta/kart-3.png");
+  background-image: url('../../images/iteration-2-images/cta/kart-3.png');
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: contain;
