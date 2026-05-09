@@ -1,8 +1,9 @@
 import { useState } from 'react'
+import axios from 'axios'
 
 const malzemeListesi = [
   'Pepperoni', 'Sosis', 'Kanada Jambonu', 'Tavuk Izgara', 'Soğan',
-  'Domates', 'Mısır', 'Sucuk', 'Jalepeno', 'Sarımsak',
+  'Domates', 'Mısır', 'Jalepeno', 'Sarımsak',
   'Biber', 'Sucuk', 'Ananas', 'Kabak'
 ]
 
@@ -15,11 +16,35 @@ function SiparisFormu() {
   const [malzemeler, setMalzemeler] = useState([])
   const [notlar, setNotlar] = useState('')
   const [adet, setAdet] = useState(1)
+
   const formGecerli = 
   isim.length >= 3 &&
   boyut !== '' &&
   malzemeler.length >= 4 &&
   malzemeler.length <= 10
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+
+    const siparis = {
+         isim,
+         boyut,
+         hamur,
+         malzemeler,
+         notlar,
+         adet
+        }
+
+    axios.post('https://reqres.in/api/pizza', siparis, {
+     headers: { 'x-api-key': import.meta.env.VITE_API_KEY }
+    })
+    .then((res) => {
+     console.log('Sipariş alındı:', res.data)
+    })
+    .catch((err) => {
+     console.log('Hata:', err)
+    })
+  }
 
   return ( 
     <div>
@@ -28,7 +53,7 @@ function SiparisFormu() {
         <h1>Teknolojik Yemekler</h1>
         </header>
 
-        <form>
+        <form onSubmit={handleSubmit}>
         {/* İsim */}
         <div>
             <label htmlFor="isim">İsim</label>
