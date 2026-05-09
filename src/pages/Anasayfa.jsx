@@ -7,16 +7,19 @@ function Anasayfa() {
   const navigate = useNavigate()
 
   return (
-    <div className="anasayfa">
-    <header>
-        <img src={logo} alt="Teknolojik Yemekler" />
-    </header>
-    <main>
-        <h1>KOD ACIKTIR<br />PİZZA, DOYURUR</h1>
-        <button className="aciktim-btn" onClick={() => navigate('/siparis')}>
-        ACIKTIM
-        </button>
-    </main>
+    <div>
+      <header className="hero">
+        <div className="hero-content">
+          <img src={logo} alt="Teknolojik Yemekler" className="hero-logo" />
+          <div className="hero-text">
+            <p className="hero-subtitle">fırsatı kaçırma</p>
+            <h1 className="hero-title">KOD ACIKTIRIR <br /> PIZZA, DOYURUR</h1>
+            <button className="hero-button" onClick={() => navigate('/siparis')}>
+              ACIKTIM
+            </button>
+          </div>
+        </div>
+      </header>
     </div>
   )
 }
