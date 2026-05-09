@@ -1,0 +1,75 @@
+.header {
+  background-color: #CE2829;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  width: 100%;
+}
+
+.siparis-sayfasi {
+  background-color: #FAF7F2;
+  min-height: 100vh;
+}
+
+.siparis-formu {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.form-grup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+.form-grup label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #292929;
+}
+
+.form-grup input,
+.form-grup select,
+.form-grup textarea {
+  padding: 0.8rem;
+  border: 1px solid #5F5F5F;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.malzeme-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+
+button[type="submit"] {
+  background-color: #FDC913;
+  border: none;
+  padding: 1rem 2rem;
+  font-weight: bold;
+  font-size: 1rem;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button[type="submit"]:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.boyut-grup {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.boyut-hamur-satir {
+  display: flex;
+  gap: 2rem;
+}
+
+.boyut-hamur-satir .form-grup {
+  flex: 1;
+}

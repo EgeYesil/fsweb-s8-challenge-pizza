@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import './SiparisFormu.css'
+import logo from '../assets/logo.svg'
 
 const malzemeListesi = [
   'Pepperoni', 'Sosis', 'Kanada Jambonu', 'Tavuk Izgara', 'Soğan',
@@ -50,15 +52,15 @@ function SiparisFormu() {
   }
 
   return ( 
-    <div>
+    <div className="siparis-sayfasi">
         {/* Başlık */}
-        <header>
-        <h1>Teknolojik Yemekler</h1>
+        <header className="header">
+        <img src={logo} alt="Teknolojik Yemekler" />
         </header>
 
-        <form onSubmit={handleSubmit}>
+        <form className="siparis-formu" onSubmit={handleSubmit}>
         {/* İsim */}
-        <div>
+        <div className="form-grup">
             <label htmlFor="isim">İsim</label>
             <input
             id="isim"
@@ -70,8 +72,10 @@ function SiparisFormu() {
         </div>
 
         {/* Boyut */}
-        <div>
+        <div className="boyut-hamur-satir">
+        <div className="form-grup">
             <label>Boyut Seç</label>
+            <div className="boyut-grup">
             {['Küçük', 'Orta', 'Büyük'].map((b) => (
             <label key={b}>
                 <input
@@ -85,9 +89,10 @@ function SiparisFormu() {
             </label>
             ))}
         </div>
+        </div>
 
         {/* Hamur */}
-        <div>
+        <div className="form-grup">
         <label htmlFor="hamur">Hamur Seç</label>
         <select
             id="hamur"
@@ -100,10 +105,12 @@ function SiparisFormu() {
             <option value="kalin">Kalın</option>
         </select>
         </div>
+        </div>
 
         {/* Malzemeler */}
-        <div>
+        <div className="form-grup">
         <label>Ek Malzemeler</label>
+        <div className="malzeme-grid">
         {malzemeListesi.map((malzeme) => (
             <label key={malzeme}>
             <input
@@ -122,9 +129,10 @@ function SiparisFormu() {
             </label>
         ))}
         </div>
+        </div>
 
         {/* Notlar */}
-        <div>
+        <div className="form-grup">
             <label htmlFor="notlar">Sipariş Notu</label>
             <textarea
             id="notlar"
