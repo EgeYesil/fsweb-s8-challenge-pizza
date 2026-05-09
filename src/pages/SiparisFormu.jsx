@@ -12,7 +12,7 @@ const malzemeListesi = [
 
 
 
-function SiparisFormu() {
+function SiparisFormu({ setSiparis }) {
   const [isim, setIsim] = useState('')
   const [boyut, setBoyut] = useState('')
   const [hamur, setHamur] = useState('')
@@ -44,6 +44,14 @@ function SiparisFormu() {
     })
     .then((res) => {
      console.log('Sipariş alındı:', res.data)
+     setSiparis({
+        isim,
+        boyut,
+        hamur,
+        malzemeler,
+        notlar,
+        adet
+     })
      navigate('/onay')
     })
     .catch((err) => {

@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom'
 import './SiparisOnay.css'
 import logo from '../assets/logo.svg'
 
-function SiparisOnay() {
+function SiparisOnay({ siparis }) {
   const navigate = useNavigate()
 
   return (
@@ -11,10 +11,14 @@ function SiparisOnay() {
         <img src={logo} alt="Teknolojik Yemekler" />
       </header>
       <main>
-        <h1>TEBRİKLER!<br />SİPARİŞİNİZ ALINDI!</h1>
-        <button className="anasayfa-btn" onClick={() => navigate('/')}>
-          Anasayfaya Dön
-        </button>
+        <p className="lezzet-yazi">lezzetin yolda</p>
+        <h1>SİPARİŞ ALINDI</h1>
+        <hr />
+        <div className="siparis-detay">
+          <p>Boyut: <strong>{siparis?.boyut}</strong></p>
+          <p>Hamur: <strong>{siparis?.hamur}</strong></p>
+          <p>Malzemeler: <strong>{siparis?.malzemeler?.join(', ')}</strong></p>
+        </div>
       </main>
     </div>
   )
