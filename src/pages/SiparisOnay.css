@@ -1,0 +1,35 @@
+.onay-sayfasi {
+  background-color: #CE2829;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.onay-sayfasi header {
+  position: absolute;
+  top: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.onay-sayfasi h1 {
+  color: white;
+  font-size: 3rem;
+  font-weight: 300;
+  letter-spacing: 3px;
+}
+
+.anasayfa-btn {
+  background-color: #FDC913;
+  border: none;
+  padding: 1rem 3rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  letter-spacing: 2px;
+  margin-top: 2rem;
+}
