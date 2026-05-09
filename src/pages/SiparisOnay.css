@@ -4,22 +4,76 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  padding-top: 2rem;
   text-align: center;
+  font-family: 'Barlow', sans-serif;
 }
 
 .onay-sayfasi header {
-  position: absolute;
-  top: 1.5rem;
-  left: 50%;
-  transform: translateX(-50%);
+  margin-bottom: 3rem;
+}
+
+.lezzet-yazi {
+  color: #FDC913;
+  font-style: italic;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-family: 'Satisfy', cursive;
 }
 
 .onay-sayfasi h1 {
   color: white;
-  font-size: 3rem;
-  font-weight: 300;
-  letter-spacing: 3px;
+  font-size: 3.5rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  margin-bottom: 1rem;
+  font-family: 'Barlow', sans-serif;
+}
+
+.onay-sayfasi hr {
+  border-color: white;
+  opacity: 0.5;
+  width: 400px;
+  margin-bottom: 1.5rem;
+}
+
+.siparis-detay {
+  color: white;
+  font-size: 1rem;
+  line-height: 2.2;
+  text-align: center;
+  width: 400px;
+  margin-bottom: 2rem;
+}
+
+.siparis-detay strong {
+  color: #FDC913;
+}
+
+.toplam-kutu {
+  border: 1px solid rgba(255,255,255,0.5);
+  border-radius: 8px;
+  padding: 1.5rem 2rem;
+  width: 400px;
+  text-align: left;
+  color: white;
+}
+
+.toplam-kutu h3 {
+  color: white;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.toplam-satir {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.toplam-satir.toplam {
+  color: #FDC913;
+  font-weight: bold;
 }
 
 .anasayfa-btn {
@@ -34,34 +88,9 @@
   margin-top: 2rem;
 }
 
-.lezzet-yazi {
-  color: #FDC913;
-  font-style: italic;
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.onay-sayfasi h1 {
+.pizza-isim {
   color: white;
-  font-size: 3.5rem;
-  font-weight: 700;
-  letter-spacing: 4px;
+  font-weight: bold;
+  font-size: 1.1rem;
   margin-bottom: 1rem;
-}
-
-.onay-sayfasi hr {
-  border-color: white;
-  opacity: 0.5;
-  margin-bottom: 1.5rem;
-}
-
-.siparis-detay {
-  color: white;
-  font-size: 1rem;
-  line-height: 2;
-  text-align: left;
-}
-
-.siparis-detay strong {
-  color: #FDC913;
 }
