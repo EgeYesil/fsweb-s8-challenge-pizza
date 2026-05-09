@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 
 const malzemeListesi = [
   'Pepperoni', 'Sosis', 'Kanada Jambonu', 'Tavuk Izgara', 'Soğan',
@@ -16,6 +17,7 @@ function SiparisFormu() {
   const [malzemeler, setMalzemeler] = useState([])
   const [notlar, setNotlar] = useState('')
   const [adet, setAdet] = useState(1)
+  const navigate = useNavigate()
 
   const formGecerli = 
   isim.length >= 3 &&
@@ -40,6 +42,7 @@ function SiparisFormu() {
     })
     .then((res) => {
      console.log('Sipariş alındı:', res.data)
+     navigate('/onay')
     })
     .catch((err) => {
      console.log('Hata:', err)
