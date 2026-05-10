@@ -20,6 +20,7 @@ function SiparisFormu({ setSiparis }) {
   const [notlar, setNotlar] = useState('')
   const [adet, setAdet] = useState(1)
   const navigate = useNavigate()
+  const [hata, setHata] = useState('')
 
   const formGecerli = 
   isim.length >= 3 &&
@@ -56,6 +57,7 @@ function SiparisFormu({ setSiparis }) {
     })
     .catch((err) => {
      console.log('Hata:', err)
+     setHata('Bir hata oluştu, lütfen tekrar deneyin.')
     })
   }
 
@@ -82,19 +84,17 @@ function SiparisFormu({ setSiparis }) {
         {/* Boyut */}
         <div className="boyut-hamur-satir">
         <div className="form-grup">
-            <label>Boyut Seç</label>
-            <div className="boyut-grup">
-            {['Küçük', 'Orta', 'Büyük'].map((b) => (
-            <label key={b}>
-                <input
-                type="radio"
-                name="boyut"
-                value={b}
-                checked={boyut === b}
-                onChange={(e) => setBoyut(e.target.value)}
-                />
-                {b}
-            </label>
+        <label>Boyut Seç <span className="zorunlu">*</span></label>
+        <div className="boyut-grup">
+            {[{label: 'S', value: 'Küçük'}, {label: 'M', value: 'Orta'}, {label: 'L', value: 'Büyük'}].map((b) => (
+            <button
+                key={b.value}
+                type="button"
+                className={`boyut-btn ${boyut === b.value ? 'aktif' : ''}`}
+                onClick={() => setBoyut(b.value)}
+               >
+                {b.label}
+            </button>
             ))}
         </div>
         </div>
@@ -150,6 +150,26 @@ function SiparisFormu({ setSiparis }) {
             />
         </div>
 
+        <div className="adet-toplam-satir">
+            <div className="adet-secici">
+                <button type="button" onClick={() => setAdet(adet > 1 ? adet - 1 : 1)}>-</button>
+                <span>{adet}</span>
+                <button type="button" onClick={() => setAdet(adet + 1)}>+</button>
+            </div>
+
+            <div className="toplam-kutu">
+                <h3>Sipariş Toplamı</h3>
+                <div className="toplam-satir">
+                <span>Seçimler</span>
+                <span>{malzemeler.length * 5} ₺</span>
+                </div>
+                <div className="toplam-satir toplam">
+                <span>Toplam</span>
+                <span>{85 + malzemeler.length * 5} ₺</span>
+                </div>
+            </div>
+        </div>
+        {hata && <p className="hata-mesaji">{hata}</p>}
         <button type="submit" disabled={!formGecerli}>
          SİPARİŞ VER
         </button>

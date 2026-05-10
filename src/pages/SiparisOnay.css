@@ -94,3 +94,119 @@
   font-size: 1.1rem;
   margin-bottom: 1rem;
 }
+
+.boyut-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid #5F5F5F;
+  background: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.boyut-btn.aktif {
+  background-color: #FDC913;
+  border-color: #FDC913;
+}
+
+.zorunlu {
+  color: #CE2829;
+}
+
+.malzeme-grid label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.malzeme-grid input[type="checkbox"] {
+  display: none;
+}
+
+.malzeme-grid label::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.malzeme-grid input[type="checkbox"]:checked + span::before,
+.malzeme-grid label:has(input:checked)::before {
+  background-color: #FDC913;
+  border-color: #FDC913;
+  content: '✓';
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.adet-toplam-satir {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.adet-secici {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.adet-secici button {
+  width: 36px;
+  height: 36px;
+  background-color: #FDC913;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.adet-secici span {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.toplam-kutu {
+  flex: 1;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.toplam-satir {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+
+.toplam-satir.toplam {
+  color: #CE2829;
+  font-weight: bold;
+}
+
+.toplam-kutu h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #292929;
+  margin-bottom: 0.5rem;
+}
+
+.hata-mesaji {
+  color: #CE2829;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
