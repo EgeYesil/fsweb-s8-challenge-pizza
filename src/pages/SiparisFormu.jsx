@@ -69,7 +69,6 @@ return (
       <img src={logo} alt="Teknolojik Yemekler" />
     </header>
 
-    {/* BEJ KISIM */}
     <div className="pizza-bilgi-wrapper">
       <div className="form-icerik">
         <div className="form-banner">
@@ -94,7 +93,6 @@ return (
       </div>
     </div>
 
-    {/* BEYAZ KISIM */}
     <div className="form-icerik">
       <form className="siparis-formu" onSubmit={handleSubmit}>
         {/* Boyut ve Hamur */}
