@@ -1,11 +1,13 @@
 import { useNavigate } from 'react-router-dom'
 import './SiparisOnay.css'
 import logo from '../assets/logo.svg'
+import Footer from '../components/Footer'
 
 function SiparisOnay({ siparis }) {
   const navigate = useNavigate()
 
   return (
+    <div className="onay-wrapper">
     <div className="onay-sayfasi">
       <header>
         <img src={logo} alt="Teknolojik Yemekler" />
@@ -30,8 +32,12 @@ function SiparisOnay({ siparis }) {
             <span>Toplam</span>
             <span>{85 + (siparis?.malzemeler?.length * 5)} ₺</span>
           </div>
+          
         </div>
+        
       </main>
+      </div>
+      <Footer />
     </div>
   )
 }

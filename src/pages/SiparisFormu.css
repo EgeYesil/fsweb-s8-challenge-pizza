@@ -7,14 +7,18 @@
 }
 
 .siparis-sayfasi {
-  background-color: #FAF7F2;
+  background-color: #ffffff;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .siparis-formu {
-  max-width: 600px;
-  margin: 0 auto;
+  background-color: #ffffff;
   padding: 2rem;
+  width: 100%;
+  margin-top: 1rem;
 }
 
 .form-grup {
@@ -42,6 +46,49 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0.5rem;
+  
+}
+
+.malzeme-grid label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
+.malzeme-grid label:has(input:checked) {
+  border: none;
+  background-color: transparent;
+}
+
+.malzeme-grid input[type="checkbox"] {
+  display: none;
+}
+
+.malzeme-grid label::before {
+  content: '';
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  background: white;
+  display: inline-block;
+}
+
+.malzeme-grid label:has(input:checked)::before {
+  background-color: #FDC913;
+  border-color: #FDC913;
+  content: '✓';
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 button[type="submit"] {
@@ -72,4 +119,81 @@ button[type="submit"]:disabled {
 
 .boyut-hamur-satir .form-grup {
   flex: 1;
+}
+
+.form-banner {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.form-banner img {
+  width: 300px;
+  display: block;
+  margin: 0 auto;
+}
+
+.breadcrumb {
+  font-size: 0.85rem;
+  color: #5F5F5F;
+  margin-bottom: 1rem;
+}
+
+.breadcrumb-aktif {
+  color: #CE2829;
+  font-weight: 600;
+}
+
+.pizza-bilgi {
+  margin-bottom: 1.5rem;
+}
+
+.pizza-bilgi h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #292929;
+  margin-bottom: 0.5rem;
+}
+
+.pizza-fiyat-satir {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.pizza-fiyat {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #292929;
+}
+
+.pizza-puan, .pizza-yorum {
+  color: #5F5F5F;
+}
+
+.pizza-aciklama {
+  font-size: 0.9rem;
+  color: #5F5F5F;
+  line-height: 1.6;
+}
+
+.form-icerik {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.toplam-satir span {
+  color: #292929;
+}
+
+.pizza-bilgi-wrapper {
+  background-color: #FAF7F2;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2rem;
 }

@@ -1,12 +1,14 @@
 .onay-sayfasi {
   background-color: #CE2829;
-  min-height: 100vh;
+  min-height: auto;
+  padding-bottom: 4rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 2rem;
   text-align: center;
   font-family: 'Barlow', sans-serif;
+  flex: 1;
 }
 
 .onay-sayfasi header {
@@ -115,42 +117,6 @@
   color: #CE2829;
 }
 
-.malzeme-grid label {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 12px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.malzeme-grid input[type="checkbox"] {
-  display: none;
-}
-
-.malzeme-grid label::before {
-  content: '';
-  width: 20px;
-  height: 20px;
-  border: 2px solid #ddd;
-  border-radius: 4px;
-  display: inline-block;
-  flex-shrink: 0;
-}
-
-.malzeme-grid input[type="checkbox"]:checked + span::before,
-.malzeme-grid label:has(input:checked)::before {
-  background-color: #FDC913;
-  border-color: #FDC913;
-  content: '✓';
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-}
-
 .adet-toplam-satir {
   display: flex;
   align-items: flex-start;
@@ -209,4 +175,11 @@
   color: #CE2829;
   font-weight: bold;
   margin-bottom: 1rem;
+}
+
+.onay-wrapper {
+  background-color: #CE2829;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
